@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>إدارة الطلبات | منصتك هنا</title><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script defer src="admin.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">M</span><span>منصتك <b>هنا</b><small>لوحة إدارة الطلبات</small></span></a><a class="admin-link" href="index.html">صفحة العملاء</a></header>
+<main class="admin-wrap">
+  <section id="loginPanel" class="login-card"><span class="eyebrow">منطقة خاصة</span><h1>تسجيل دخول الإدارة</h1><p class="muted">استخدم حساب الإدارة الذي أنشأته في Supabase.</p><form id="loginForm"><label>البريد الإلكتروني<input name="email" type="email" required></label><label>كلمة المرور<input name="password" type="password" required></label><button class="primary-btn">دخول لوحة التحكم</button><p id="loginMessage" class="form-message"></p></form></section>
+  <section id="dashboard" class="hidden">
+    <div class="dash-head"><div><span class="eyebrow">إدارة العملاء</span><h1>طلبات المشاريع</h1><p class="muted">تابع الطلبات وحدّث حالتها من مكان واحد.</p></div><button id="logoutBtn" class="secondary-btn">تسجيل الخروج</button></div>
+    <div class="toolbar"><input id="searchInput" placeholder="ابحث بالاسم أو رقم الهاتف..."><button id="refreshBtn" class="secondary-btn">تحديث</button></div>
+    <div class="table-wrap"><table><thead><tr><th>العميل</th><th>الهاتف</th><th>نوع المشروع</th><th>الميزانية</th><th>تاريخ الطلب</th><th>الحالة</th><th>التفاصيل</th></tr></thead><tbody id="ordersBody"><tr><td colspan="7">جارٍ تحميل الطلبات...</td></tr></tbody></table></div>
+    <p id="dashMessage" class="form-message"></p>
+  </section>
+</main>
+</body></html>

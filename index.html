@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <title>منصتك هنا | اطلب مشروعك</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">M</span><span>منصتك <b>هنا</b><small>حلول رقمية تبدأ بفكرة</small></span></a>
+    <a class="admin-link" href="admin.html">دخول الإدارة</a>
+  </header>
+  <main class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">حوّل فكرتك إلى مشروع رقمي</span>
+      <h1>مشروعك يبدأ<br><span>من هنا.</span></h1>
+      <p>احكيلنا عن فكرتك، وفريق منصتك هنا هيراجع طلبك ويتواصل معاك لمناقشة التفاصيل.</p>
+      <div class="trust-row"><span>● طلبك محفوظ</span><span>● تواصل مباشر</span><span>● حلول تناسب احتياجك</span></div>
+    </div>
+    <section class="form-card">
+      <div class="card-heading"><div><span class="eyebrow">ابدأ الآن</span><h2>اطلب مشروعك</h2></div><span class="step">01 / 01</span></div>
+      <form id="requestForm">
+        <div class="field-grid">
+          <label>الاسم بالكامل<input name="name" required minlength="2" maxlength="100" placeholder="اكتب اسمك"></label>
+          <label>رقم الموبايل<input name="phone" required inputmode="tel" maxlength="20" placeholder="01xxxxxxxxx"></label>
+          <label>البريد الإلكتروني <small>(اختياري)</small><input name="email" type="email" maxlength="150" placeholder="name@example.com"></label>
+          <label>نوع المشروع
+            <select name="project_type" required>
+              <option value="">اختر نوع المشروع</option>
+              <option>موقع شركة</option><option>متجر إلكتروني</option><option>موقع مطعم أو كافيه</option>
+              <option>صفحة هبوط إعلانية</option><option>تطبيق أو نظام خاص</option><option>مشروع آخر</option>
+            </select>
+          </label>
+          <label>الميزانية المتوقعة
+            <select name="budget">
+              <option value="">غير محددة</option><option>أقل من 1000 جنيه</option><option>1000 – 3000 جنيه</option>
+              <option>3000 – 5000 جنيه</option><option>5000 – 10000 جنيه</option><option>أكثر من 10000 جنيه</option>
+            </select>
+          </label>
+          <label>موعد التنفيذ
+            <select name="timeline"><option value="">غير محدد</option><option>في أقرب وقت</option><option>خلال أسبوعين</option><option>خلال شهر</option><option>لاحقًا</option></select>
+          </label>
+        </div>
+        <label>احكيلنا تفاصيل مشروعك<textarea name="details" required minlength="10" maxlength="3000" rows="4" placeholder="محتاج الموقع يعمل إيه؟ وإيه أهم المميزات المطلوبة؟"></textarea></label>
+        <label class="consent"><input type="checkbox" required> أوافق على استخدام بياناتي للتواصل معي بخصوص هذا الطلب.</label>
+        <button class="primary-btn" id="submitBtn" type="submit">إرسال طلب المشروع <span>←</span></button>
+        <p id="formMessage" class="form-message" role="status"></p>
+        <p class="privacy-note">بياناتك تُستخدم لمتابعة طلبك فقط، ولا تشاركها في النموذج أي معلومات سرية.</p>
+      </form>
+    </section>
+  </main>
+  <footer><span>© <span id="year"></span> منصتك هنا</span><span>تصميم وتطوير منصتك هنا</span></footer>
+</body>
+</html>
